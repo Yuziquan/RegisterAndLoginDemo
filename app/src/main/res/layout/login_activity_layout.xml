@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--设置为灰白色背景-->
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:orientation="vertical">
+
+    <!--添加导航栏-->
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#ffffff">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="登录"
+                android:textSize="20sp"/>
+
+        <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="9dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:text="注册"
+                android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+    <!--添加灰色线条-->
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d9d9"/>
+
+
+    <!--添加公司图标-->
+    <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/company"/>
+
+    <!--两个输入框-->
+    <!--将EditText的焦点转移到其父布局上，使得EditText在初始化时不会获取焦点-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="#FFFFFF">
+
+        <!--手机号码输入框-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/person"/>
+
+            <!--去掉下划线-->
+            <EditText
+                    android:id="@+id/et_login_phonenum"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="手机号码"
+                    android:textSize="14sp"
+                    android:background="@null"
+            />
+
+        </LinearLayout>
+
+        <!--添加灰色分隔线条-->
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="28dp"
+                android:background="#d9d9d9"/>
+
+        <!--密码输入框-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/lock"/>
+
+            <!--去掉下划线-->
+            <EditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="textPassword"
+                    android:hint="密码"
+                    android:textSize="14sp"
+                    android:background="@null"
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录或注册则表示您同意"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="13sp"/>
+
+        <TextView
+                android:id="@+id/tv_login_terms_for_usage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="《使用条款》"
+                android:textColor="#ff2400"
+                android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_radius_btn"
+            android:text="登  录"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"/>
+
+    <Button
+            android:id="@+id/btn_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:background="@null"
+            android:text="忘记密码"
+            android:textColor="#4ebeea"
+            android:textSize="13sp"
+            android:layout_gravity="right"
+            android:layout_marginRight="40dp"/>
+
+
+    <!--中间留空-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!--更多登录一栏的分隔线-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="54dp"
+            android:paddingRight="54dp">
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#bfbfbf"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="更多登录"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#bfbfbf"/>
+
+    </LinearLayout>
+
+
+    <!--三种第三方登录方式-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/iv_qq_login"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="true"
+                    android:src="@drawable/qq_icon"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="QQ登录"
+                    android:textColor="#999999"
+                    android:textSize="13dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/iv_wechat_login"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="true"
+                    android:src="@drawable/wechat_icon"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="微信登录"
+                    android:textColor="#999999"
+                    android:textSize="13dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/iv_weibo_login"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:clickable="true"
+                    android:src="@drawable/weibo_icon"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="微博登录"
+                    android:textColor="#999999"
+                    android:textSize="13dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

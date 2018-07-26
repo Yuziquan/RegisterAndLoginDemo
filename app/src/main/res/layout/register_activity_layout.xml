@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:orientation="vertical">
+
+    <!--添加导航栏-->
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#ffffff">
+
+        <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:clickable="true"
+                android:padding="3dp"
+                android:src="@drawable/back_btn"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="注册"
+                android:textSize="20sp"/>
+
+    </RelativeLayout>
+
+    <!--添加灰色线条-->
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d9d9"/>
+
+
+    <!--三个输入框-->
+    <!--将EditText的焦点转移到其父布局上，使得EditText在初始化时不会获取焦点-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="#FFFFFF">
+
+        <!--手机号码输入框-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/person"/>
+
+            <!--去掉下划线-->
+            <EditText
+                    android:id="@+id/et_register_phonenum"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="请输入手机号码"
+                    android:textSize="14sp"
+                    android:background="@null"/>
+
+            <Button
+                android:id="@+id/btn_get_sms_code"
+                android:layout_width="88dp"
+                android:layout_height="28dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/bg_get_sms_code"
+                android:text="获取验证码"
+                android:textColor="#9507a6e6"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <!--添加灰色分隔线条-->
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="28dp"
+                android:background="#d9d9d9"/>
+
+
+        <!--短信验证码输入框-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/envelope"/>
+
+            <!--去掉下划线-->
+            <EditText
+                    android:id="@+id/et_register_sms_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="请输入短信验证码"
+                    android:textSize="14sp"
+                    android:background="@null"
+            />
+
+        </LinearLayout>
+
+        <!--添加灰色分隔线条-->
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginRight="28dp"
+                android:background="#d9d9d9"/>
+
+
+        <!--密码输入框-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/lock"/>
+
+            <!--去掉下划线-->
+            <EditText
+                    android:id="@+id/et_register_password"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:inputType="textPassword"
+                    android:hint="请输入密码"
+                    android:textSize="14sp"
+                    android:background="@null"
+            />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录或注册则表示您同意"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="13sp"/>
+
+        <TextView
+                android:id="@+id/tv_register_terms_for_usage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《使用条款》"
+                android:clickable="true"
+                android:textColor="#ff2400"
+                android:textSize="13sp"/>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_radius_btn"
+            android:text="立即注册"
+            android:textSize="15sp"
+            android:textColor="@android:color/white"/>
+
+
+</LinearLayout>
