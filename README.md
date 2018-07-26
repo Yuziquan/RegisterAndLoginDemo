@@ -14,7 +14,7 @@
 
 <div align=center>
 
-<img src="https://github.com/Yuziquan/WCCalendar2/blob/master/Screenshots/main_interface.jpg" width=250 height=440 />
+<img src="https://github.com/Yuziquan/RegisterAndLoginDemo/blob/master/Screenshots/login.png" width=250 height=440 />
 
 </div>
 
@@ -26,7 +26,7 @@
 
 <div align=center>
 
-<img src="https://github.com/Yuziquan/WCCalendar2/blob/master/Screenshots/main_interface.jpg" width=250 height=440 />
+<img src="https://github.com/Yuziquan/RegisterAndLoginDemo/blob/master/Screenshots/register.png" width=250 height=440 />
 
 </div>
 
